@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block main_block %}
+
+        <h1>The clock is ticking</h1><br><br>
+
+        Your word is : <b> {{ sourceword }} </b>  <br>
+        <br>
+        Enter you guesses in the box, seperating each word with a space.<br><br>
+        <form action='/processwords' method='POST'>
+                <input type='text' size='50' autocomplete='off' name='user_input'><br><br>
+                <input type='submit' value="Done!">
+        </form>
+
+{% endblock %}

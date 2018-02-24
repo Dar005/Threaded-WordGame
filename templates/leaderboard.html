@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block main_block %}
+
+    <h1>Top ten leaderboard:</h1>
+    <table border="2" cellpadding="10" bgcolor="#ffffff">
+        <tr>
+            <th>Position</th>
+            <th>Time</th>
+            <th>Name</th>
+            <th>Sourceword</th>
+        </tr>
+            <ol>
+                {% for entry in leaderboard %}
+                <tr>
+                    <td> {{ loop.index }} </td>
+                    <td> {{ entry[0] }}  </td>
+                    <td> {{ entry[1] }}   </td>
+                    <td> {{ entry[2] }}   </td>
+                </tr>
+                {% endfor %}
+            </ol>
+    </table>
+    <br>
+    <a href="/running"><button type="submit">Play again!</button></a><br><br>
+    <a href="/"><button type="submit">View the rules</button></a>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block main_block %}
+
+        <h1>Congratulations!<br></h1><br>
+        Your a winner! You took: {{ final_time }} seconds <br><br>
+        Enter your name to be added to the leaderboard:<br><br>
+        <form action='/addwinner' method='POST'>
+                <input type='text' size='30' autocomplete='off' name='user_name' required><br><br>
+                <input type='submit' value='Enter Name!'>
+        </form>
+
+{% endblock %}

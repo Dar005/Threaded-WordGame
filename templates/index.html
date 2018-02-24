@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block main_block %}
+        <p>
+
+        </p>
+        <p>
+            Welcome to the <b>WordGame</b>.
+            You will be given a word of seven letters or more (source word), the goal is to make
+            seven words of three(3) or more letters
+        </p>
+        <h2>Rules</h2>
+            <ul>
+                <li>All words must be made up from letters contained in the source word</li>
+                <li>All words must be in the Dictionary</li>
+                <li>All word must contain three(3) or more letters</li>
+                <li>You can only use a word once (no duplicates)</li>
+                <li>The source word cannot be entered as a word</li>
+                <li>Case does not matter HAT and hat are the same word</li>
+            </ul>
+
+        <a href="/running"><button type="submit">Start!</button></a>
+
+
+{% endblock %}
